@@ -4,14 +4,12 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 const morgan = require('morgan');
-const dotenv = require('dotenv');
 const { json } = require('body-parser');
-dotenv.config();
 const userroutter = require("./routes/user");
 const productrouter = require("./routes/products");
 const cartrouter = require("./routes/cartproduct");
 // connect to mongoose
-mongoose.connect(process.env.mongodb_url,() => {
+mongoose.connect(mongodb_url = "mongodb+srv://phpmongodb:dunghoitao1@cluster0.5jsv4.mongodb.net/?retryWrites=true&w=majority",() => {
     console.log("connect to mongoose");
 });
 
