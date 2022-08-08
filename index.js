@@ -29,6 +29,6 @@ app.get("/api",(req,res,next)=>{
     res.status(200).json("xin chào mọi người");
 });
 
-app.listen(9999,()=>{
+app.listen(process.env.PORT || 9999,()=>{
     console.log('listening on port ');
 });
